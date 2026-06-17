@@ -18,12 +18,12 @@ All without a single example of human-written reasoning.
 
 ## Key Features
 
-✅ **Pure RL Approach** – No supervised fine-tuning or reasoning traces required  
-✅ **Rule-Based Rewards** – Simple correctness + format rewards; no expensive reward models  
-✅ **Memory Efficient** – GRPO replaces critic networks with group-relative advantage statistics  
-✅ **Production Ready** – Works on standard GPUs with accessible models (1.5B–3B parameters)  
-✅ **Comprehensive Experiments** – Five systematic studies validating core claims  
-✅ **Open Source** – Full implementation, training code, and reproducible results  
+- **Pure RL Approach** – No supervised fine-tuning or reasoning traces required  
+- **Rule-Based Rewards** – Simple correctness + format rewards; no expensive reward models  
+- **Memory Efficient** – GRPO replaces critic networks with group-relative advantage statistics  
+- **Production Ready** – Works on standard GPUs with accessible models (1.5B–3B parameters)  
+- **Comprehensive Experiments** – Five systematic studies validating core claims  
+- **Open Source** – Full implementation, training code, and reproducible results  
 
 ## Quick Start
 
@@ -183,27 +183,6 @@ The 3B model implements structured reasoning in **step 1**, while 1.5B model nee
 
 Training exclusively on math improves performance on spatial (+12pp) and causal reasoning (+13pp). This suggests models learn general "think step-by-step" behavior, not domain-specific patterns.
 
-## Project Structure
-
-```
-├── grpo_training/
-│   ├── algorithm.py          # GRPO implementation
-│   ├── reward_functions.py   # Correctness + format rewards
-│   ├── data_utils.py         # GSM8K loading and preprocessing
-│   └── model_utils.py        # Model loading and inference
-├── experiments/
-│   ├── e1_reward_ablation.py
-│   ├── e2_rl_vs_no_rl.py
-│   ├── e3_generation_sweep.py
-│   ├── e4_model_scale.py
-│   └── e5_domain_transfer.py
-├── train_grpo.py             # Main training script
-├── evaluate.py               # Evaluation on test sets
-├── run_experiments.py        # Experiment runner
-├── requirements.txt
-└── README.md
-```
-
 ## Configuration
 
 ### Default Hyperparameters
@@ -306,7 +285,6 @@ This project is licensed under the MIT License – see LICENSE file for details.
 ## Contact & Support
 
 - **Issues**: Please use GitHub Issues for bugs and questions
-- **Email**: your.email@example.com
 - **Discussion**: Contributions and ideas welcome via Pull Requests
 
 ---
